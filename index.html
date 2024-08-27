@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <title>Personal Portfolio Template</title>
+  <title>YASH NAGAR | JAVA DEVELOPER </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Template css Files -->
@@ -15,15 +15,47 @@
   <link rel="stylesheet" class="alternate-style" title="orange" href="css/skins/orange.css" type="text/css" disabled>
   <link rel="stylesheet" class="alternate-style" title="yellow" href="css/skins/yellow.css" type="text/css" disabled>
   <link rel="stylesheet" href="css/styleSwitcher.css" type="text/css">
+
+  <!-- Inline CSS for Responsive Design -->
+  <style>
+    /* Ensure that rows are displayed correctly on all screen sizes */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      /* Space between elements */
+    }
+
+    /* Make info-item flexible and adjust its width */
+    .info-item {
+      flex: 1 1 calc(33.333% - 30px);
+      /* 3 items per row, minus space for gaps */
+      box-sizing: border-box;
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+    }
+
+    /* Stack items vertically on smaller screens */
+    @media (max-width: 768px) {
+      .info-item {
+        flex: 1 1 100%;
+        /* Stack vertically on small screens */
+      }
+    }
+
+    /* Ensure proper layout for the personal-info section */
+    .personal-info .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 
 <body>
-
   <!-- Preloader -->
   <div class="preloader">
-    <div class="loader">
-
-    </div>
+    <div class="loader"></div>
   </div>
   <!-- Preloader End -->
 
@@ -38,19 +70,20 @@
       <div class="aside-inner">
         <!-- Logo -->
         <div class="logo">
-          <a href="#">Yash</a>
+          <a href="#">YashNagar</a>
         </div>
         <!-- Nav -->
         <ul class="nav" style="width: 500px;">
           <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
           <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-          <li><a href="#experience"><i class="fa fa-list"></i> Education & Experience </a></li>
+          <li><a href="#experience"><i class="fa fa-list"></i>Experience </a></li>
+          <li><a href="#education"><i class="fa fa-list"></i> Education </a></li>
           <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
         </ul>
-
       </div>
     </div>
     <!-- Aside End -->
+
     <!-- Main Content -->
     <div class="main-content">
 
@@ -69,9 +102,6 @@
         </div>
       </section>
       <!-- Home Section End -->
-
-
-      <!--  //+++++++++++++++++++++++++++About Section++++++++++++++++++++++++++ // -->
 
       <!-- About Section -->
       <section class="about section" id="about">
@@ -96,34 +126,6 @@
                 </div>
               </div>
               <div class="row">
-                <div class="personal-info padd-15">
-                  <div class="row">
-                    <div class="info-item padd-15">
-                      <p>Birthday : <span>27 April 1997</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Age : <span>28</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Email : <span>nagaryash905@gmail.com</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Degree : <span>B.Tech</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Phone : <span>+91 7791895631</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>City : <span>Ahmedabad</span></p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="buttons padd-15">
-                      <a href="resume/YashNagar-Resume.pdf" class="btn">Download Cv</a>
-                      <a href="#contact" data-section-index="1" class="btn hire-me">Hire me</a>
-                    </div>
-                  </div>
-                </div>
                 <div class="skills padd-15">
                   <div class="row">
                     <div class="skill-item padd-15">
@@ -146,6 +148,13 @@
                     </div>
                   </div>
                 </div>
+                <div class="row" style="top: 50px; right: -80px;">
+                  <div class="buttons padd-15">
+                    <a href="resume/YashNagar-Resume.pdf" class="btn">Download Cv</a>&nbsp;&nbsp;<br><br>
+
+                    <a href="#contact" data-section-index="1" class="btn hire-me">Hire me</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -154,21 +163,18 @@
       <!-- About Section End -->
 
       <!-- Education And Experience Section -->
-
-      <!-- About Section -->
       <section class="about section" id="experience">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
-              <h2>Education And Experience</h2>
+              <h2>Experience</h2>
             </div>
           </div>
           <div class="row">
             <div class="about-content padd-15">
-              <div class="row">                
+              <div class="row">
                 <div class="experience padd-15">
-                  <h3 class="title">Experience</h3>
-                  <div class="row">
+                  <div class="row" style="width: 1130px;">
                     <div class="timeline-box padd-15">
                       <div class="timeline shadow-dark">
                         <!-- timeline Item -->
@@ -177,43 +183,36 @@
                           <h6 class="timeline-date"><i class="fa fa-calendar"></i> April 2023 - Present, Ahmedabad</h6>
                           <h4 class="timeline-title">Java Developer (Alpha Numero)</h4>
                           <p class="timeline-text">
-                            <strong>&#8226;&nbsp;</strong>Developing and maintaining Confluence documentation to streamline project management and knowledge sharing, significantly enhancing team collaboration and accessibility.<br>
-                            <strong>&#8226;&nbsp;</strong>Executing high availability configurations across systems, leading to a remarkable 30% increase in uptime and overall system reliability.<br>
-                            <strong>&#8226;&nbsp;</strong>Integrating a diverse range of databases , including PostgreSQL, MongoDB, RavenDB, DynamoDB, and Vertica, streamlining and optimizing data management processes to improve data accessibility.<br>
-                            <strong>&#8226;&nbsp;</strong>Conducting thorough metadata analysis using Java, leading to a 20% improvement in data consistency and verification.<br>
-                            <strong>&#8226;&nbsp;</strong>Implementing strategic UI and back-end patches, leading to a substantial 25% improvement in product performance.<br>
-                            <strong>&#8226;&nbsp;</strong>Designing a Java-based RavenDB connector, optimizing database operations and reducing retrieval times by 40%.
-                        </p>                                                                            
-                          </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="education padd-15">
-                  <h3 class="title">Education</h3>
-                  <div class="row">
-                    <div class="timeline-box padd-15">
-                      <div class="timeline shadow-dark">
-                        <!-- timeline Item -->
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2015 - 2019, Bikaner</h6>
-                          <h4 class="timeline-title">College Of Engineering & Technology&nbsp;(B. Tech in ECE)</span></h4>
-                          <p class="timeline-text"> Graduated with a BTech in Electronics & Communication, 
-                            building a strong foundation in technology and engineering principles.</p>
+                            <strong>&#8226;&nbsp;</strong>Developing and maintaining Confluence documentation to
+                            streamline project management and knowledge sharing, significantly enhancing team
+                            collaboration and accessibility.<br>
+                            <strong>&#8226;&nbsp;</strong>Executing high availability configurations across systems,
+                            leading to a remarkable 30% increase in uptime and overall system reliability.<br>
+                            <strong>&#8226;&nbsp;</strong>Integrating a diverse range of databases, including
+                            PostgreSQL, MongoDB, RavenDB, DynamoDB, and Vertica, streamlining and optimizing data
+                            management processes to improve data accessibility.<br>
+                            <strong>&#8226;&nbsp;</strong>Conducting thorough metadata analysis using Java, leading to a
+                            20% improvement in data consistency and verification.<br>
+                            <strong>&#8226;&nbsp;</strong>Implementing strategic UI and back-end patches, leading to a
+                            substantial 25% improvement in product performance.<br>
+                            <strong>&#8226;&nbsp;</strong>Designing a Java-based RavenDB connector, optimizing database
+                            operations and reducing retrieval times by 40%.
+                          </p>
                         </div>
                         <div class="timeline-item">
                           <div class="circle-dot"></div>
-                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2014 - 2015, Bikaner</h6>
-                          <h4 class="timeline-title">Yadav Bharti Sr. Sec. School<span>&nbsp;(Higher Secondary Education)</span></h4>
-                          <p class="timeline-text">Completed 12th class with a focus on Science and Mathematics, 
-                            laying a strong groundwork for technical and analytical skills.</p>
-                        </div>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2011 - 2012, Bikaner</h6>
-                          <h4 class="timeline-title">Central Academy Sr. Sec. School<span>&nbsp;(Secondary Education)</span></h4>
-                          <p class="timeline-text">Completed 10th grade with a solid foundation in core subjects and a commitment to academic excellence.</p>
+                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> July 2022 - March 2023, Pune</h6>
+                          <h4 class="timeline-title">Full Stack Java Developer Training (Seed Infotech) </h4>
+                          <p class="timeline-text">
+                            <strong>&#8226;&nbsp;</strong>Completed an intensive 9-month full stack development training
+                            program, mastering Java technologies including J2SE/J2EE, JSP & Servlets, Spring, Spring
+                            Boot, and Hibernate.<br>
+                            <strong>&#8226;&nbsp;</strong>Attained expertise in Oracle SQL, HTML, CSS, and Bootstrap,
+                            enabling robust front-end and back-end development.<br>
+                            <strong>&#8226;&nbsp;</strong>Effectively managed projects using Maven and deployed
+                            applications on Tomcat Server, ensuring smooth and efficient application delivery.<br>
+
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -224,8 +223,56 @@
           </div>
         </div>
       </section>
-      <!-- About Section End -->
+      <!-- Education and Experience Section End -->
 
+      <!-- Education And Experience Section -->
+      <section class="about section" id="education">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Education</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="about-content padd-15">
+              <div class="row">
+                <div class="education padd-15">
+                  <div class="row" style="width: 1130px;">
+                    <div class="timeline-box padd-15">
+                      <div class="timeline shadow-dark">
+                        <!-- timeline Item -->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2015 - 2019, Bikaner</h6>
+                          <h4 class="timeline-title">College Of Engineering & Technology&nbsp;(B. Tech in ECE)</h4>
+                          <p class="timeline-text">Graduated with a BTech in Electronics & Communication, building a
+                            strong foundation in technology and engineering principles.</p>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2014 - 2015, Bikaner</h6>
+                          <h4 class="timeline-title">Yadav Bharti Sr. Sec. School<span>&nbsp;(Higher Secondary
+                              Education)</span></h4>
+                          <p class="timeline-text">Completed 12th class with a focus on Science and Mathematics, laying
+                            a strong groundwork for technical and analytical skills.</p>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h6 class="timeline-date"><i class="fa fa-calendar"></i> 2011 - 2012, Bikaner</h6>
+                          <h4 class="timeline-title">Central Academy Sr. Sec. School<span>&nbsp;(Secondary
+                              Education)</span></h4>
+                          <p class="timeline-text">Completed 10th grade with a solid foundation in core subjects and a
+                            commitment to academic excellence.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Education and Experience Section End -->
 
       <!-- Portfolio Section -->
@@ -241,7 +288,7 @@
           </div>
         </div>
       </section>
-      <!-- Blog Section End -->
+      <!-- Portfolio Section End -->
 
       <!-- Contact Section -->
       <section class="contact section" id="contact">
@@ -252,7 +299,7 @@
             </div>
           </div>
           <div class="row">
-            <!-- contact-info-item  -->
+            <!-- contact-info-item -->
             <div class="contact-info-item padd-15">
               <div class="icon">
                 <i class="fa fa-phone"></i>
@@ -261,7 +308,7 @@
               </div>
             </div>
             <!-- contact-info-item end -->
-            <!-- contact-info-item  -->
+            <!-- contact-info-item -->
             <div class="contact-info-item padd-15">
               <div class="icon">
                 <i class="fa fa-envelope"></i>
